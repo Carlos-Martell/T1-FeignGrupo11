@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class CharacterRM {
-    private List<Character> characters;
+    private List<Character> results;
 }
