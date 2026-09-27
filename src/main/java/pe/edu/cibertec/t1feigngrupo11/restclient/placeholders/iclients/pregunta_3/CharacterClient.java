@@ -9,10 +9,10 @@ import pe.edu.cibertec.t1feigngrupo11.restclient.placeholders.model.pregunta_3.C
 import java.util.List;
 
 @FeignClient(name = "characterClient",
-        url = "https://rickandmortyapi.com/api/character",
+        url = "https://rickandmortyapi.com/api",
         configuration = FeignConfig.class)
 public interface CharacterClient {
 
-    @GetMapping("/characters")
+    @GetMapping("/character")
     CharacterRM getCharacters(@RequestParam String status, @RequestParam String species);
 }

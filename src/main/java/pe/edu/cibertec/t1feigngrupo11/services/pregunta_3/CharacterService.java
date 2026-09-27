@@ -14,8 +14,8 @@ import java.util.List;
 public class CharacterService {
     private final CharacterClient characterClient;
 
-    public List<Character> getCharacters(String status, String species) {
-         CharacterRM characterRM = characterClient.getCharacters(status,species);
+    public List<Character> getCharactersfilter() {
+         CharacterRM characterRM = characterClient.getCharacters("alive","human");
          return characterRM.getResults();
     }
 }

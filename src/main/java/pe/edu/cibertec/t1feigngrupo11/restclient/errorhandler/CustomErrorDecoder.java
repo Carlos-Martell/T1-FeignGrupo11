@@ -18,7 +18,8 @@ public class CustomErrorDecoder implements ErrorDecoder {
             case BAD_REQUEST -> new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,
                     "Solicitud incorrecta al API");
-            default -> new Exception("Error desconocido");
+            default -> new Exception("Error desconocido, status: " + response.status());
+
         };
     }
 }
